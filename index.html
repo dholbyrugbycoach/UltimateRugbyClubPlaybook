@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>YOUR CLUB RFC — Playbook</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+.hero{padding:56px 48px 48px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 40%,rgba(74,222,128,0.05) 0%,transparent 65%);pointer-events:none;}
+.hero-season{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:14px;}
+.hero h1{font-size:4.2rem;font-weight:900;color:var(--white);line-height:.95;margin-bottom:8px;letter-spacing:.02em;}
+.hero h1 span{color:var(--green);}
+.hero-sub{font-family:'Barlow Condensed',sans-serif;font-size:.88rem;letter-spacing:.22em;color:var(--dim);text-transform:uppercase;margin-bottom:36px;}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;font-family:'Barlow Condensed',sans-serif;font-size:.92rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;text-decoration:none;border-radius:var(--radius);transition:all .2s;cursor:pointer;border:none;}
+.cta-primary{background:var(--green);color:var(--deep);}
+.cta-primary:hover{background:var(--green-d);transform:translateY(-2px);box-shadow:0 8px 24px rgba(74,222,128,0.22);}
+.cta-secondary{background:transparent;color:var(--muted);border:1px solid var(--border);}
+.cta-secondary:hover{border-color:var(--green);color:var(--green);transform:translateY(-2px);}
+.val-strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--border);}
+.val-item{padding:22px 24px;border-right:1px solid var(--border);}
+.val-item:last-child{border-right:none;}
+.val-n{font-family:'Barlow Condensed',sans-serif;font-size:2.4rem;font-weight:900;color:rgba(74,222,128,0.1);line-height:1;margin-bottom:6px;}
+.val-t{font-family:'Barlow Condensed',sans-serif;font-size:.92rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:6px;}
+.val-b{font-size:.78rem;color:var(--muted);line-height:1.6;}
+</style>
+</head>
+<body>
+<div class="app">
+<button class="mob-menu" onclick="toggleSidebar()">☰</button>
+<div class="mob-overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <div class="sidebar-badge">RFC</div>
+    <div class="sidebar-name">Your Club RFC</div>
+    <div class="sidebar-sub">Team Playbook · 2026–27</div>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-group open">
+      <div class="nav-group-header" onclick="toggleGroup(this)">Overview <span class="chevron">▼</span></div>
+      <div class="nav-group-items">
+        <a class="nav-item active" onclick="show('home',this)"><span class="nav-icon">🏠</span>Home</a>
+        <a class="nav-item" onclick="show('pillars',this)"><span class="nav-icon">🏛️</span>Pillars of Success</a>
+        <a class="nav-item" onclick="show('pitch',this)"><span class="nav-icon">🏟️</span>Pitch Map</a>
+        <a class="nav-item" onclick="show('squad',this)"><span class="nav-icon">👥</span>Squad</a>
+      </div>
+    </div>
+    <div class="nav-group open">
+      <div class="nav-group-header" onclick="toggleGroup(this)">Game Systems <span class="chevron">▼</span></div>
+      <div class="nav-group-items">
+        <a class="nav-item" onclick="show('attack',this)"><span class="nav-icon">⚡</span>Attack — Shape</a>
+        <a class="nav-item" onclick="show('reload',this)"><span class="nav-icon">🔄</span>Linkage &amp; Reload</a>
+        <a class="nav-item" onclick="show('defence',this)"><span class="nav-icon">🛡️</span>Defence System</a>
+        <a class="nav-item" onclick="show('breakdown-land',this)"><span class="nav-icon">💥</span>Breakdown</a>
+        <a class="nav-item" onclick="show('kickgame',this)"><span class="nav-icon">🦶</span>Kicking Game</a>
+        <a class="nav-item" onclick="show('calls',this)"><span class="nav-icon">📣</span>Call Language</a>
+      </div>
+    </div>
+    <div class="nav-group open">
+      <div class="nav-group-header" onclick="toggleGroup(this)">Playbooks <span class="chevron">▼</span></div>
+      <div class="nav-group-items">
+        <a class="nav-item" href="forwards.html"><span class="nav-icon">💪</span>Forwards Book</a>
+        <a class="nav-item" href="backs.html"><span class="nav-icon">🏃</span>Backs Book</a>
+      </div>
+    </div>
+  </nav>
+</aside>
+
+<main class="main">
+
+<!-- HOME -->
+<div class="section active" id="tab-home">
+  <div class="hero">
+    <div class="hero-season">2026–27 · Complete Team Playbook</div>
+    <h1>YOUR<br/><span>CLUB</span> RFC</h1>
+    <div class="hero-sub">Shape · Linkage · Gain Line · Quick Ball</div>
+    <div class="cta-row">
+      <a href="forwards.html" class="cta-btn cta-primary">💪 Forwards Playbook →</a>
+      <a href="backs.html" class="cta-btn cta-secondary">🏃 Backs Playbook →</a>
+    </div>
+  </div>
+
+  <!-- Values -->
+  <div class="val-strip">
+    <div class="val-item">
+      <div class="val-n">01</div>
+      <div class="val-t">Loyalty</div>
+      <div class="val-b">To yourself, your family, your teammates, this team, this club. Loyalty is demonstrated every single day.</div>
+    </div>
+    <div class="val-item">
+      <div class="val-n">02</div>
+      <div class="val-t">Discipline</div>
+      <div class="val-b">Adhere to the way we play. Discipline in our systems, our calls, our roles. A disciplined team beats a talented one.</div>
+    </div>
+    <div class="val-item">
+      <div class="val-n">03</div>
+      <div class="val-t">Courage</div>
+      <div class="val-b">To play our way — 0 to 100 metres, all the time. Be brave enough to run the system under pressure. Courage is a choice.</div>
+    </div>
+    <div class="val-item">
+      <div class="val-n">04</div>
+      <div class="val-t">Mindset</div>
+      <div class="val-b">Make this the best team we have ever been — every day. Live the standard. Inspire each other. Never drop below your standard.</div>
+    </div>
+  </div>
+
+  <!-- Quick summary strip -->
+  <div style="padding:20px 48px;display:flex;flex-wrap:wrap;gap:32px;align-items:center;background:rgba(74,222,128,0.025);border-bottom:1px solid var(--border);">
+    <div><div class="label" style="margin-bottom:4px;">Attack</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;color:var(--white);">Shape · Linkage · Gain Line · Quick Ball</div></div>
+    <div><div class="label" style="margin-bottom:4px;">Defence</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;color:var(--white);">4 vs 2 · WIND Reaction</div></div>
+    <div><div class="label" style="margin-bottom:4px;">Breakdown</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;color:var(--white);">One Bullet = One Kill</div></div>
+    <div><div class="label" style="margin-bottom:4px;">Set Piece</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;color:var(--white);">Technically Superior</div></div>
+    <div style="margin-left:auto;"><div class="label" style="margin-bottom:4px;">Call Themes</div><div style="font-size:.78rem;color:var(--muted);">Colours · Weather · Animals · Drinks · Terrain</div></div>
+  </div>
+</div>
+
+<!-- PILLARS -->
+<div class="section" id="tab-pillars">
+  <div class="sec-hd"><h2>Pillars of <em>Success</em></h2><p>The five foundations on which everything we do is built</p></div>
+  <div class="alert"><strong>Key Values — Discipline · Respect · Loyalty.</strong> These are the minimum standard to wear this jersey — not aspirations.</div>
+
+  <div style="display:flex;flex-direction:column;gap:12px;">
+
+    <div class="card">
+      <div class="card-title">💪 Pillar 1 — Be the Fittest Team in the Competition</div>
+      <div class="g3" style="margin-bottom:12px;">
+        <div class="blk"><span class="blk-title">Tight 5</span>Strength and running fitness. The engine room of everything. Must be able to dominate physically for the full 80 minutes.</div>
+        <div class="blk"><span class="blk-title">Middle 5</span>Strength, speed and agility. Link the forwards and backs — need to cover ground fast and hit hard at the breakdown.</div>
+        <div class="blk"><span class="blk-title">Outside 5</span>Strength and linear speed. Must be able to create and finish. Fit enough to be threats 0–100m all game.</div>
+      </div>
+      <p>Be able to outperform opposition in the <strong>last 30 minutes</strong> of any game. That is when games are decided and when our fitness becomes our weapon.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">⚡ Pillar 2 — Be the Best Attacking Team (0–100m)</div>
+      <p style="margin-bottom:12px;">Win the gain line and pass the ball to attack their weakness. Keep the defence on the back foot — don't let them recover. <strong>Always look up — make a quick decision.</strong></p>
+      <div class="step-list">
+        <div class="step"><div class="step-num">A</div><div class="step-body"><strong>Shape gives us options.</strong> RED (Bull — direct off 9) · GREEN (Shark — wide off 9) · WHITE (X — cross off 10). All three options live simultaneously every phase. Balance is the key.</div></div>
+        <div class="step"><div class="step-num">B</div><div class="step-body"><strong>Linkage — 9, 10, 12 on a string.</strong> These three work together always — presenting RED, GREEN and WHITE simultaneously. One movement forces the defence to make a choice.</div></div>
+        <div class="step"><div class="step-num">C</div><div class="step-body"><strong>Reloading.</strong> Hard on effort — get to your feet and move quickly to where you are most effective next. Tight 5 reload to RED, back row to GREEN, backs to WHITE. 15 on feet in attack shape at all times.</div></div>
+        <div class="step"><div class="step-num">D</div><div class="step-body"><strong>Set piece and first phase work as one.</strong> A dominant set piece creates the platform. The gain line must be won in first phase to allow the attack to roll on with momentum.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🛡️ Pillar 3 — Stop the Ball (4 vs 2)</div>
+      <div class="g2">
+        <div>
+          <p style="margin-bottom:10px;"><strong>Create a 4 vs 2 numerical advantage at every breakdown.</strong> Four defenders committed to stopping the ball against two attackers — this is the target at every ruck.</p>
+          <p>Urgency with Control, Communication, Spacing and Line speed are essential. All players must be active in getting into the defensive line and reacting on call — <strong>UP.</strong></p>
+        </div>
+        <div class="blk">
+          <span class="blk-title">WIND Reaction</span>
+          A <strong>physical and mental change of speed and intent</strong>. The moment we win the ball back, we attack immediately. Stop the opposition attack in the first 20 seconds after any turnover. WIND = thunder — go now.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">💥 Pillar 4 — Breakdown Fundamentals</div>
+      <div class="g4" style="margin-bottom:12px;">
+        <div class="blk" style="text-align:center;"><span class="blk-title" style="color:var(--green);">Ball Grip</span><div style="font-size:.76rem;color:var(--muted);">Squeeze before contact. Never go to ground without full control.</div></div>
+        <div class="blk" style="text-align:center;"><span class="blk-title" style="color:var(--green);">Ball Position</span><div style="font-size:.76rem;color:var(--muted);">Present toward own players. Make 9's life easy.</div></div>
+        <div class="blk" style="text-align:center;"><span class="blk-title" style="color:var(--green);">TK Speed</span><div style="font-size:.76rem;color:var(--muted);">Squeeze the ball — low and fast to the breakdown.</div></div>
+        <div class="blk" style="text-align:center;"><span class="blk-title" style="color:var(--green);">4th Man</span><div style="font-size:.76rem;color:var(--muted);">Read the picture — make the right decision.</div></div>
+      </div>
+      <div class="step-list">
+        <div class="step"><div class="step-num">2</div><div class="step-body"><strong>2nd man:</strong> Take space or take the threat. Read immediately on arrival — is the ball secure or is there a threat to clear? Decide and commit. One bullet.</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body"><strong>3rd man:</strong> Secure the inside gate — always. This is non-negotiable. No exceptions. The gate must be secured before anything else. One kill.</div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-body"><strong>4th man:</strong> Make a decision. Is the breakdown secure? Is there a threat on the edge? Is there space to exploit? Be the smart player — read and react immediately.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🎯 Pillar 5 — Set Piece: Technically Superior</div>
+      <div class="g3">
+        <div class="blk"><span class="blk-title">Scrum</span>Set low — technically superior to every opponent. Win the hit every engagement. Quickest and cleanest delivery in our competition. Hooker's responsibility to win the hit speed.</div>
+        <div class="blk"><span class="blk-title">Lineout</span>Greater attention to detail than any team we face. Understand momentum. Always quicker than the opposition — tempo is our weapon. Precise delivery damages opposition confidence.</div>
+        <div class="blk"><span class="blk-title">Kick-Off</span>Improve fundamentals every week. Contest aerially. Apply pressure to their kicker. Smart attack options on our kick-off — never just kick for territory and hope.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PITCH MAP -->
+<div class="section" id="tab-pitch">
+  <div class="sec-hd"><h2>Pitch <em>Map</em></h2><p>Field zones · Attack decisions · Gain line priority · Kicking strategy</p></div>
+  <div class="g2" style="margin-bottom:18px;">
+    <div class="pitch-wrap">
+      <div class="label" style="margin-bottom:10px;">Zone Priorities</div>
+      <svg viewBox="0 0 260 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+        <rect width="260" height="400" rx="6" fill="#040f06"/>
+        <rect x="16" y="16" width="228" height="368" fill="#091508" stroke="rgba(74,222,128,0.1)" stroke-width="1"/>
+        <rect x="16" y="16" width="228" height="24" fill="rgba(34,197,94,0.5)" rx="2"/>
+        <text x="130" y="32" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="#fff" font-weight="700" letter-spacing="2">OPPOSITION TRY LINE</text>
+        <rect x="16" y="360" width="228" height="24" fill="rgba(34,197,94,0.5)" rx="2"/>
+        <text x="130" y="376" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="#fff" font-weight="700" letter-spacing="2">OUR TRY LINE</text>
+        <!-- Gold -->
+        <rect x="16" y="40" width="228" height="76" fill="rgba(245,158,11,0.14)"/>
+        <line x1="16" y1="116" x2="244" y2="116" stroke="rgba(245,158,11,0.4)" stroke-width="1"/>
+        <text x="130" y="65" text-anchor="middle" font-family="Barlow Condensed" font-size="12" fill="#fbbf24" font-weight="700" letter-spacing="2">GOLD ZONE</text>
+        <text x="130" y="82" text-anchor="middle" font-family="Barlow" font-size="8" fill="rgba(255,255,255,0.45)">Strike · Gain Line · Score</text>
+        <text x="130" y="97" text-anchor="middle" font-family="Barlow" font-size="7.5" fill="rgba(255,255,255,0.3)" font-style="italic">Must come away with points</text>
+        <!-- Green -->
+        <rect x="16" y="116" width="228" height="76" fill="rgba(34,197,94,0.08)"/>
+        <line x1="16" y1="192" x2="244" y2="192" stroke="rgba(34,197,94,0.3)" stroke-width="1"/>
+        <text x="130" y="141" text-anchor="middle" font-family="Barlow Condensed" font-size="12" fill="#4ade80" font-weight="700" letter-spacing="2">GREEN ZONE</text>
+        <text x="130" y="158" text-anchor="middle" font-family="Barlow" font-size="8" fill="rgba(255,255,255,0.45)">Shape · Linkage · Gain Line</text>
+        <text x="130" y="174" text-anchor="middle" font-family="Barlow" font-size="7.5" fill="rgba(255,255,255,0.3)" font-style="italic">Win gain line — attack their weakness</text>
+        <!-- Amber -->
+        <rect x="16" y="192" width="228" height="76" fill="rgba(245,158,11,0.06)"/>
+        <line x1="16" y1="268" x2="244" y2="268" stroke="rgba(245,158,11,0.25)" stroke-width="1"/>
+        <text x="130" y="217" text-anchor="middle" font-family="Barlow Condensed" font-size="12" fill="#d97706" font-weight="700" letter-spacing="2">AMBER ZONE</text>
+        <text x="130" y="234" text-anchor="middle" font-family="Barlow" font-size="8" fill="rgba(255,255,255,0.45)">Territory First · 3 phases then kick</text>
+        <text x="130" y="250" text-anchor="middle" font-family="Barlow" font-size="7.5" fill="rgba(255,255,255,0.3)" font-style="italic">Set piece is a weapon here</text>
+        <!-- Red -->
+        <rect x="16" y="268" width="228" height="92" fill="rgba(239,68,68,0.06)"/>
+        <text x="130" y="298" text-anchor="middle" font-family="Barlow Condensed" font-size="12" fill="#f87171" font-weight="700" letter-spacing="2">RED ZONE</text>
+        <text x="130" y="316" text-anchor="middle" font-family="Barlow" font-size="8" fill="rgba(255,255,255,0.45)">Exit Fast · Kick Long · Minimise Rucks</text>
+        <text x="130" y="332" text-anchor="middle" font-family="Barlow" font-size="7.5" fill="rgba(255,255,255,0.3)" font-style="italic">Kick and contest their lineout</text>
+      </svg>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <div class="card"><div class="card-title">🟡 Gold Zone — Strike</div><p>Win the gain line and attack their weakness immediately. Keep the defence on the back foot. Must come away with points. Shape gives us options — make the right read, go in first phase. Set piece and first phase work as one here — no wasted possessions.</p></div>
+      <div class="card"><div class="card-title">🟢 Green Zone — Build</div><p>Shape–Linkage–Gain Line–Quick Ball. Always look up and make quick decisions. 9/10/12 on a string, all options live simultaneously. 15 on feet in attack shape at all times. Tight 5 reload to RED, back row to GREEN, backs to WHITE.</p></div>
+      <div class="card"><div class="card-title">🟠 Amber Zone — Territory</div><p>Territory before points. Gain the gain line or kick for territory. 3 phases — if no gain line advantage, apply pressure through BLACK (kick). Running plays must create forward momentum — no lateral play without purpose.</p></div>
+      <div class="card"><div class="card-title">🔴 Red Zone — Exit</div><p>Exit fast. Minimise rucks in own 22. Kick long and contest their lineout. Running only if certain of gain line. No lateral plays under pressure in our own half. Every second we spend here is a gift to the opposition.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- SQUAD -->
+<div class="section" id="tab-squad">
+  <div class="sec-hd"><h2>Squad <em>List</em></h2><p>Starting XV · Bench · Lineout roles · Updated weekly</p></div>
+  <div class="alert"><strong>Placeholder squad.</strong> Update with player names, lineout roles and cover positions before distributing.</div>
+  <div class="g2">
+    <div class="card">
+      <div class="card-title">Starting XV</div>
+      <table class="squad-table">
+        <thead><tr><th>#</th><th>Position</th><th>Player</th><th>LO Role</th></tr></thead>
+        <tbody>
+          <tr><td class="pos-num">1</td><td>Loosehead Prop</td><td style="color:var(--white)">TBC</td><td>—</td></tr>
+          <tr><td class="pos-num">2</td><td>Hooker</td><td style="color:var(--white)">TBC</td><td>Throw</td></tr>
+          <tr><td class="pos-num">3</td><td>Tighthead Prop</td><td style="color:var(--white)">TBC</td><td>—</td></tr>
+          <tr><td class="pos-num">4</td><td>Lock</td><td style="color:var(--white)">TBC</td><td>Jumper A / SUMMIT</td></tr>
+          <tr><td class="pos-num">5</td><td>Lock</td><td style="color:var(--white)">TBC</td><td>Jumper B / SUMMIT</td></tr>
+          <tr><td class="pos-num">6</td><td>Blindside Flanker</td><td style="color:var(--white)">TBC</td><td>RIDGE (Lifter)</td></tr>
+          <tr><td class="pos-num">7</td><td>Openside Flanker</td><td style="color:var(--white)">TBC</td><td>RIDGE (Lifter)</td></tr>
+          <tr><td class="pos-num">8</td><td>Number 8</td><td style="color:var(--white)">TBC</td><td>Tail / RIVER</td></tr>
+          <tr><td class="pos-num">9</td><td>Scrum Half</td><td style="color:var(--white)">TBC</td><td>Receiver</td></tr>
+          <tr><td class="pos-num">10</td><td>Fly Half</td><td style="color:var(--white)">TBC</td><td>—</td></tr>
+          <tr><td class="pos-num">11</td><td>Left Wing</td><td style="color:var(--white)">TBC</td><td>—</td></tr>
+          <tr><td class="pos-num">12</td><td>Inside Centre</td><td style="color:var(--white)">TBC</td><td>—</td></tr>
+          <tr><td class="pos-num">13</td><td>Outside Centre</td><td style="color:var(--white)">TBC</td><td>—</td></tr>
+          <tr><td class="pos-num">14</td><td>Right Wing</td><td style="color:var(--white)">TBC</td><td>—</td></tr>
+          <tr><td class="pos-num">15</td><td>Fullback</td><td style="color:var(--white)">TBC</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div class="card-title">Bench</div>
+      <table class="squad-table">
+        <thead><tr><th>#</th><th>Position</th><th>Player</th><th>Cover</th></tr></thead>
+        <tbody>
+          <tr><td class="pos-num">16</td><td>Hooker</td><td style="color:var(--white)">TBC</td><td>2</td></tr>
+          <tr><td class="pos-num">17</td><td>Loosehead</td><td style="color:var(--white)">TBC</td><td>1</td></tr>
+          <tr><td class="pos-num">18</td><td>Tighthead</td><td style="color:var(--white)">TBC</td><td>3</td></tr>
+          <tr><td class="pos-num">19</td><td>Lock / Flanker</td><td style="color:var(--white)">TBC</td><td>4/5/6</td></tr>
+          <tr><td class="pos-num">20</td><td>Back Row</td><td style="color:var(--white)">TBC</td><td>6/7/8</td></tr>
+          <tr><td class="pos-num">21</td><td>Scrum Half</td><td style="color:var(--white)">TBC</td><td>9</td></tr>
+          <tr><td class="pos-num">22</td><td>Fly Half / Centre</td><td style="color:var(--white)">TBC</td><td>10/12</td></tr>
+          <tr><td class="pos-num">23</td><td>Back</td><td style="color:var(--white)">TBC</td><td>TBC</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ATTACK SHAPE -->
+<div class="section" id="tab-attack">
+  <div class="sec-hd"><h2>Attack — <em>Shape</em></h2><p>Win the gain line · Attack their weakness · RED · GREEN · WHITE</p></div>
+  <div class="alert"><strong>Always look up — make a quick decision.</strong> Shape gives us options. Keep the defence on the back foot — never let them recover. Heads up rugby, 0–100m.</div>
+
+  <div class="card" style="margin-bottom:14px;">
+    <div class="card-title">⚡ The Three Bases — RED · GREEN · WHITE</div>
+    <svg viewBox="0 0 640 180" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;border-radius:4px;margin-bottom:14px;">
+      <rect width="640" height="180" rx="4" fill="#091508"/>
+      <rect x="16" y="8" width="608" height="164" fill="none" stroke="rgba(74,222,128,0.08)" stroke-width="1"/>
+      <line x1="16" y1="90" x2="624" y2="90" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <!-- Defenders -->
+      <circle cx="220" cy="44" r="13" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+      <text x="220" y="48" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="rgba(255,255,255,0.4)">D1</text>
+      <circle cx="308" cy="44" r="13" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+      <text x="308" y="48" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="rgba(255,255,255,0.4)">D2</text>
+      <circle cx="396" cy="44" r="13" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+      <text x="396" y="48" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="rgba(255,255,255,0.4)">D3</text>
+      <circle cx="484" cy="44" r="13" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+      <text x="484" y="48" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="rgba(255,255,255,0.4)">D4</text>
+      <!-- Ruck -->
+      <rect x="16" y="80" width="64" height="20" rx="3" fill="rgba(139,26,26,0.6)"/>
+      <text x="48" y="94" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="rgba(255,255,255,0.6)">RUCK</text>
+      <!-- 9 -->
+      <circle cx="102" cy="90" r="13" fill="rgba(239,68,68,0.25)" stroke="#ef4444" stroke-width="1.5"/>
+      <text x="102" y="94" text-anchor="middle" font-family="Barlow Condensed" font-size="10" fill="#f87171">9</text>
+      <!-- F1 RED -->
+      <circle cx="210" cy="110" r="12" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="1.5"/>
+      <text x="210" y="114" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="#f87171">F1</text>
+      <path d="M115,92 L198,108" fill="none" stroke="#ef4444" stroke-width="1.8" marker-end="url(#ar)"/>
+      <text x="145" y="88" text-anchor="middle" font-family="Barlow Condensed" font-size="10" fill="#ef4444" font-weight="700">RED</text>
+      <!-- F2 GREEN -->
+      <circle cx="354" cy="128" r="12" fill="rgba(34,197,94,0.2)" stroke="#22c55e" stroke-width="1.5"/>
+      <text x="354" y="132" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="#4ade80">F2</text>
+      <path d="M115,96 Q230,120 342,128" fill="none" stroke="#22c55e" stroke-width="1.8" marker-end="url(#ag)"/>
+      <text x="262" y="148" text-anchor="middle" font-family="Barlow Condensed" font-size="10" fill="#22c55e" font-weight="700">GREEN</text>
+      <!-- 10 and F3 WHITE -->
+      <circle cx="305" cy="152" r="11" fill="rgba(226,232,240,0.15)" stroke="rgba(226,232,240,0.5)" stroke-width="1.5"/>
+      <text x="305" y="156" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="#e2e8f0">10</text>
+      <circle cx="462" cy="138" r="12" fill="rgba(226,232,240,0.1)" stroke="rgba(226,232,240,0.4)" stroke-width="1.5"/>
+      <text x="462" y="142" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="#e2e8f0">F3</text>
+      <path d="M115,90 Q200,150 294,152" fill="none" stroke="rgba(226,232,240,0.35)" stroke-width="1.5" marker-end="url(#aw)"/>
+      <path d="M316,150 L450,140" fill="none" stroke="rgba(226,232,240,0.35)" stroke-width="1.5" marker-end="url(#aw)"/>
+      <text x="500" y="128" text-anchor="middle" font-family="Barlow Condensed" font-size="10" fill="rgba(226,232,240,0.7)" font-weight="700">WHITE</text>
+      <!-- GOLD double up -->
+      <circle cx="102" cy="130" r="10" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3 2"/>
+      <text x="102" y="134" text-anchor="middle" font-family="Barlow Condensed" font-size="7" fill="#fbbf24">GOLD</text>
+      <text x="400" y="168" text-anchor="middle" font-family="Barlow" font-size="8" fill="rgba(255,255,255,0.3)" font-style="italic">Spare forward from ruck fills pocket of 10 or 9 (GOLD — double up)</text>
+      <defs>
+        <marker id="ar" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 Z" fill="#ef4444"/></marker>
+        <marker id="ag" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 Z" fill="#22c55e"/></marker>
+        <marker id="aw" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 Z" fill="rgba(226,232,240,0.6)"/></marker>
+      </defs>
+    </svg>
+    <div class="g3">
+      <div class="blk"><span class="blk-title" style="color:#ef4444;">🔴 RED — Bull (Direct)</span>9 direct carry. F1 set on outside shoulder of D1, attacks the D1/D2 gap. On RED, 9 runs. Extra player from ruck fills pocket of 10 or 9 — GOLD double up. Tight 5 reload to F1.</div>
+      <div class="blk"><span class="blk-title" style="color:#4ade80;">🟢 GREEN — Shark (Wide)</span>9 fires wide to F2. F2 cuts past D3/D4 — attack the edge. Happens simultaneously with RED, forcing the defence to choose. Back row reloads to GREEN. Shark cuts and goes.</div>
+      <div class="blk"><span class="blk-title" style="color:#e2e8f0;">⚪ WHITE — X (Cross)</span>Late ball to 10. F3 crosses behind the pod — attacks the gap created by RED and GREEN movement pulling defenders inside. Backs reload to WHITE. Spare forward fills 10/9 pockets.</div>
+    </div>
+  </div>
+
+  <div class="g2">
+    <div class="card">
+      <div class="card-title">📋 Attack Decision Making — ROK</div>
+      <div class="step-list">
+        <div class="step"><div class="step-num">R</div><div class="step-body"><strong>Read.</strong> Always look up before receiving the ball. Identify which defender is most vulnerable — D1, D2, D3, D4. See the defence shape before the ball arrives.</div></div>
+        <div class="step"><div class="step-num">O</div><div class="step-body"><strong>Options.</strong> Know your three options before the ball is played. RED (D1/D2 gap) · GREEN (edge) · WHITE (cross). Which one gives us the best chance to win the gain line?</div></div>
+        <div class="step"><div class="step-num">K</div><div class="step-body"><strong>Kill.</strong> Execute with commitment and pace. Go directly through the read, not sideways. Every carry must have a target. Win the gain line — attack their weakness.</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Reloading — Who Goes Where</div>
+      <div class="step-list">
+        <div class="step"><div class="step-num" style="background:rgba(239,68,68,0.3);color:#f87171;">T5</div><div class="step-body"><strong>Tight 5 reload to RED.</strong> After the breakdown, get to your feet and move to the F1 carrying position. Support the direct carry line.</div></div>
+        <div class="step"><div class="step-num" style="background:rgba(34,197,94,0.25);color:#4ade80;">BR</div><div class="step-body"><strong>Back Row reloads to GREEN.</strong> Get to the edge position — F2 in the GREEN line. Always a wide threat after every breakdown.</div></div>
+        <div class="step"><div class="step-num" style="background:rgba(226,232,240,0.15);color:#e2e8f0;">BK</div><div class="step-body"><strong>Backs reload to WHITE.</strong> 10/12/13 restructure the cross option. 15 must always be on feet in attack shape — the safety valve and extra option.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LINKAGE & RELOAD -->
+<div class="section" id="tab-reload">
+  <div class="sec-hd"><h2>Linkage <em>&amp; Reload</em></h2><p>9/10/12 on a string · 15 on feet · Kick return structure · Kiji X Shuttle</p></div>
+  <div class="g2" style="margin-bottom:14px;">
+    <div class="card">
+      <div class="card-title">🔗 Linkage — 9, 10, 12 on a String</div>
+      <p style="margin-bottom:12px;">9, 10 and 12 must always work together. RED, GREEN and WHITE are always in motion simultaneously — presenting options to the defence at all times.</p>
+      <div class="step-list">
+        <div class="step"><div class="step-num">9</div><div class="step-body"><strong>9 controls RED and GREEN simultaneously.</strong> A glance left presents RED (F1) — a glance right presents GREEN (F2). The defence must respect both before the ball is played.</div></div>
+        <div class="step"><div class="step-num">10</div><div class="step-body"><strong>10 controls the RED structure and WHITE.</strong> Manages F1, F2 in the RED base. If in the ruck — 12 takes the 10 role. The WHITE option always runs through 10.</div></div>
+        <div class="step"><div class="step-num">12</div><div class="step-body"><strong>12 controls GREEN (minimum F3).</strong> If 10 is occupied, 12 takes over the RED structure. If 12 is in the ruck, the next back takes the WHITE role.</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">🔄 Kick Return — TAIHO (Reload After Catch)</div>
+      <p style="margin-bottom:12px;"><strong>TAIHO.</strong> After catching a kick — reload straight back into our attack shape. Read kick cues early (in the pocket) and move before the ball arrives. 13 and open wing typically have 5 back.</p>
+      <div class="step-list">
+        <div class="step"><div class="step-num">1</div><div class="step-body"><strong>Pass, Run or Kick options immediately.</strong> Ball carrier into contact only if it is 1 vs 1 — TK. Closest 3 players clean out. Then reload to shape.</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body"><strong>10 controls the RED structure</strong> (F1 and F2). 12 controls GREEN (minimum F3). Aim is linkage of RED/GREEN/WHITE — look at space immediately.</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body"><strong>If 10 is in the ruck</strong> — 12 takes the 10 role. If 12 is in the ruck — the next back takes the WHITE role. Chain of responsibility never breaks.</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">🦵 Kicking Structure — Brilliant Simple Kicking</div>
+    <div class="g3">
+      <div class="blk"><span class="blk-title">Left Hand Side (LHS)</span>From LHS set piece — Sora delivery (kick from 10). 10 kicks on receipt from 9. Kick return: 10 recovers LHS. Kick to contest, then reload.</div>
+      <div class="blk"><span class="blk-title">Right Hand Side (RHS)</span>From RHS set piece — Katame (kick from 9). 9 kicks direct. Kick return: 9 recovers RHS. Efficient, no wasted movement.</div>
+      <div class="blk"><span class="blk-title">Slow Ball — Kiji X</span>When ruck ball is slow — Kiji X Shuttle. Shape adjusts to create time and space. Backs flood into width. 15 safety position. Re-establish shape before attacking.</div>
+    </div>
+  </div>
+</div>
+
+<!-- DEFENCE SYSTEM -->
+<div class="section" id="tab-defence">
+  <div class="sec-hd"><h2>Defence <em>System</em></h2><p>4 vs 2 · Ruck structure 1,1,2,3 · STORM · TIDE · MIST · WIND</p></div>
+  <div class="alert"><strong>4 vs 2.</strong> Create a numerical advantage at every breakdown. WIND — physical and mental change of speed. Stop their attack in the first 20 seconds after every turnover. UP.</div>
+
+  <div class="card" style="margin-bottom:14px;">
+    <div class="card-title">📋 Basic Structure — Ruck Defence 1, 1, 2, 3</div>
+    <svg viewBox="0 0 620 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;border-radius:4px;margin-bottom:14px;">
+      <rect width="620" height="160" rx="4" fill="#091508"/>
+      <line x1="16" y1="80" x2="604" y2="80" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+      <rect x="16" y="68" width="60" height="24" rx="3" fill="rgba(139,26,26,0.5)"/>
+      <text x="46" y="84" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="rgba(255,255,255,0.6)">RUCK</text>
+      <!-- 9 behind D2 -->
+      <circle cx="46" cy="116" r="11" fill="rgba(34,197,94,0.2)" stroke="#22c55e" stroke-width="1.5"/>
+      <text x="46" y="120" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="#4ade80">9</text>
+      <text x="46" y="138" text-anchor="middle" font-family="Barlow" font-size="7.5" fill="rgba(255,255,255,0.35)">behind D2</text>
+      <!-- D1 -->
+      <circle cx="108" cy="80" r="14" fill="rgba(74,222,128,0.12)" stroke="rgba(74,222,128,0.4)" stroke-width="2"/>
+      <text x="108" y="84" text-anchor="middle" font-family="Barlow Condensed" font-size="10" fill="#4ade80">1</text>
+      <text x="108" y="106" text-anchor="middle" font-family="Barlow" font-size="7" fill="rgba(255,255,255,0.35)">1m from ruck</text>
+      <!-- D2 -->
+      <circle cx="188" cy="80" r="14" fill="rgba(74,222,128,0.12)" stroke="rgba(74,222,128,0.4)" stroke-width="2"/>
+      <text x="188" y="84" text-anchor="middle" font-family="Barlow Condensed" font-size="10" fill="#4ade80">1</text>
+      <text x="188" y="106" text-anchor="middle" font-family="Barlow" font-size="7" fill="rgba(255,255,255,0.35)">hits 9 if runs</text>
+      <!-- D3 -->
+      <circle cx="298" cy="80" r="14" fill="rgba(74,222,128,0.08)" stroke="rgba(74,222,128,0.25)" stroke-width="1.5"/>
+      <text x="298" y="84" text-anchor="middle" font-family="Barlow Condensed" font-size="10" fill="#4ade80">2</text>
+      <text x="298" y="106" text-anchor="middle" font-family="Barlow" font-size="7" fill="rgba(255,255,255,0.35)">9 to 10 channel</text>
+      <!-- D4 -->
+      <circle cx="420" cy="80" r="14" fill="rgba(74,222,128,0.08)" stroke="rgba(74,222,128,0.25)" stroke-width="1.5"/>
+      <text x="420" y="84" text-anchor="middle" font-family="Barlow Condensed" font-size="10" fill="#4ade80">3</text>
+      <text x="420" y="106" text-anchor="middle" font-family="Barlow" font-size="7" fill="rgba(255,255,255,0.35)">outside shoulder of 10</text>
+      <!-- D5 -->
+      <circle cx="530" cy="80" r="14" fill="rgba(74,222,128,0.06)" stroke="rgba(74,222,128,0.18)" stroke-width="1.5"/>
+      <text x="530" y="84" text-anchor="middle" font-family="Barlow Condensed" font-size="10" fill="#4ade80">4</text>
+      <text x="530" y="106" text-anchor="middle" font-family="Barlow" font-size="7" fill="rgba(255,255,255,0.35)">next out</text>
+      <!-- 10 sweeping -->
+      <circle cx="298" cy="128" r="11" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.3)" stroke-width="1"/>
+      <text x="298" y="132" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="rgba(74,222,128,0.7)">10</text>
+      <text x="380" y="22" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="rgba(74,222,128,0.5)" letter-spacing="2">RUCK DEFENCE → 1 · 1 · 2 · 3 SPACING</text>
+    </svg>
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div class="blk"><span class="blk-title">Defender 1 (1m from ruck)</span>Sets first on the immediate side of the breakdown. Defends inside ball — defends the inside runner if 9 runs at Defender 2. Not moved out of position by players folding. Sets both sides. Never vacated.</div>
+      <div class="blk"><span class="blk-title">Defender 2 (hits 9)</span>Defends the channel between half and 10. Hits halfback if they run. 9 is positioned behind this defender on defence.</div>
+      <div class="blk"><span class="blk-title">Defender 3 (outside 10)</span>Defends outside shoulder of 10. Can drift after 2nd pass. Must continue to move forward throughout.</div>
+      <div class="blk"><span class="blk-title">All Defenders</span>Urgency with Control, Communication, Spacing and Line speed are essential. Must be active in getting into the defensive line and reacting on call — <strong>UP.</strong></div>
+    </div>
+  </div>
+
+  <div class="g3">
+    <div class="card">
+      <div class="card-title">⚡ STORM — Smash (Blitz)</div>
+      <p style="margin-bottom:10px;">Fast line speed, led up and called by the <strong>outside men</strong>. Implemented when there is an obvious numbers advantage, slow ruck ball, or strategically from set piece.</p>
+      <div class="blk"><span class="blk-title">When to use</span>Seeing T5 players only or 10 can only play short. Led from the outside in — outside men initiate and all follow.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🌊 TIDE — Default (Hot)</div>
+      <p style="margin-bottom:10px;"><strong>Default defensive system</strong> — used every phase. First 3 steps are hard off the line.</p>
+      <div class="blk"><span class="blk-title">Line speed pattern</span>Quick – slow – quick. Off the line hard. Slow to assess. Then hard again on 2nd pass. Gachi defence on the inside. Creates contested, slow ball — reload.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🌫️ MIST — Cold (Shortage)</div>
+      <p style="margin-bottom:10px;">Called by wide players on <strong>shortage of defenders</strong> — especially on WIND (turnover) ball. No defenders move forward on MIST call.</p>
+      <div class="blk"><span class="blk-title">Sequence</span>Back off — give immediate gain line. Once spacing achieved, all slide across and force attack to sideline. When numbers equal — go forward. Next phase: aggressive, all pull straight back into line.</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px;">
+    <div class="card-title">🌪️ WIND — Thunder (Turnover Reaction)</div>
+    <div class="g2">
+      <p><strong>Physical and mental change of speed and intent.</strong> The moment we win the ball back — WIND. We stop their attack in the first 20 seconds. Thunder attack on turnover ball. Go immediately, with intensity, before they can reorganise.</p>
+      <div class="blk"><span class="blk-title">Scrum Defence — LHS</span>If 8 runs blindside: 6 on 1st man, 8 covers inside, 11 connects with 6 on 2nd man, 15 covers. If they come openside: 7 takes 1st man, 9 on the 10. 10 stays square, links both 7 and 9. Near-side lock and 6 on the fold.</div>
+    </div>
+  </div>
+</div>
+
+<!-- BREAKDOWN -->
+<div class="section" id="tab-breakdown-land">
+  <div class="sec-hd"><h2>Breakdown <em>Principles</em></h2><p>One bullet = one kill · Clean out accuracy · Support line · Check line</p></div>
+  <div class="alert"><strong>One Bullet = One Kill.</strong> Every cleanout must be accurate and decisive. Never waste a body at the breakdown — arrive with a clear purpose and execute it completely.</div>
+
+  <div class="g2" style="margin-bottom:14px;">
+    <div class="card">
+      <div class="card-title">💥 Arrival Order — Roles</div>
+      <div class="step-list">
+        <div class="step"><div class="step-num">BC</div><div class="step-body"><strong>Ball Carrier.</strong> Most carries go at least 1m beyond the defender. Ball grip — squeeze before contact. Ball position — present back toward own players. TK speed — squeeze the ball on the way down.</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body"><strong>2nd Man — take space or take the threat.</strong> Read immediately on arrival. Is the ball secure? Is there a threat to the ball? Decide in the first step and commit fully. One bullet.</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body"><strong>3rd Man — inside gate. Always.</strong> This is non-negotiable. Secure the inside gate before anything else. One kill. No exceptions — the gate must be locked before 3rd man considers any other option.</div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-body"><strong>4th Man — make a decision.</strong> Is the breakdown secure? Threat on the edge? Space to exploit on the next phase? Be the smart player. Read the full picture and react — this is your moment.</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">📐 Support Line — Check Line</div>
+      <p style="margin-bottom:12px;">Support players must run a <strong>check line</strong> — not a straight line to the ball carrier. The check line gives the ability to either take a pass or support at the breakdown immediately.</p>
+      <div class="blk"><span class="blk-title">Take Down</span>If the ball carrier is going to be tackled, the support player must be on the right line to arrive at the breakdown immediately. Not reacting — anticipating. The check line is the discipline that makes this possible.</div>
+      <div class="blk"><span class="blk-title">Inside Gate Priority</span>Secure the inside gate before anything else. The gate is the most important position at every breakdown. A secured inside gate stops the opposition from winning the ball — an unsecured gate costs us possession.</div>
+      <div style="margin-top:10px;padding:10px 12px;background:rgba(74,222,128,0.04);border:1px solid var(--border);border-radius:5px;font-size:.78rem;color:var(--muted);">
+        <strong style="color:var(--white);">Ball grip · Ball position · TK speed.</strong> These three fundamentals apply to the ball carrier on every single carry. No exceptions — every time.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- KICKING GAME -->
+<div class="section" id="tab-kickgame">
+  <div class="sec-hd"><h2>Kicking <em>Game</em></h2><p>Zone-based decisions · Kick pressure · Taiho kick situation</p></div>
+  <div class="g2" style="margin-bottom:14px;">
+    <div class="card">
+      <div class="card-title">🦵 Kick Strategy by Zone</div>
+      <div class="step-list">
+        <div class="step"><div class="step-num" style="background:rgba(245,158,11,0.3);color:#fbbf24;">🟡</div><div class="step-body"><strong>Gold Zone — Kick to Score.</strong> Grubber into space, cross-kick to winger, chip over the line. Only kick if it creates a clear try-scoring opportunity. Ball in hand is usually better.</div></div>
+        <div class="step"><div class="step-num" style="background:rgba(34,197,94,0.2);color:#4ade80;">🟢</div><div class="step-body"><strong>Green Zone — Kick to Gain.</strong> Box kick to contest, cross-field, chip behind the line. Create territory and pressure. Contest immediately — never let them catch clean.</div></div>
+        <div class="step"><div class="step-num" style="background:rgba(245,158,11,0.18);color:#d97706;">🟠</div><div class="step-body"><strong>Amber Zone — Kick to Retrieve.</strong> Box kick from 9, contest high. Apply pressure to their backfield. Win the lineout from their kick return. Kick with chase — never kick and watch.</div></div>
+        <div class="step"><div class="step-num" style="background:rgba(239,68,68,0.2);color:#f87171;">🔴</div><div class="step-body"><strong>Red Zone — Kick to Relieve.</strong> Kick long and contest their lineout. Exit own 22 as fast as possible. Never kick out on the full. Minimise rucks spent in own half.</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">⚠️ Taiho — Kick Pressure Situation</div>
+      <p style="margin-bottom:12px;">Designed to pressure the 10 who sits back in the pocket to kick. Our 9 joins the defensive line but works <strong>independent of the line</strong> — aims at the right foot of the kicker to pressure the kick.</p>
+      <div class="blk"><span class="blk-title">Setup</span>9 joins the defensive line but D2 is on his outside shoulder. 9 aims directly at the kicking foot of their 10. 8 drops back with both wings and 15 to create a deep safety net. 13 can start to move back once 10 drops into the pocket and receives the ball.</div>
+      <div class="blk"><span class="blk-title">Brilliant Simple Kicking</span>LHS set piece — Sora from 10. RHS set piece — Katame from 9. Slow ball — Kiji X Shuttle. Kick return: LHS to 10, RHS to 9. Simple, clear decisions — no hesitation.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CALL LANGUAGE -->
+<div class="section" id="tab-calls">
+  <div class="sec-hd"><h2>Call <em>Language</em></h2><p>Mixed themes · Max 2 syllables · Grouped by theme for easy recall</p></div>
+  <div class="g2">
+    <div class="card">
+      <div class="card-title">🎨 Attack — Colours</div>
+      <div class="call-grid">
+        <div class="call-row"><span>Direct carry off 9 — Bull</span><span class="badge badge-red">RED</span></div>
+        <div class="call-row"><span>Wide attack off 9 — Shark</span><span class="badge badge-green">GREEN</span></div>
+        <div class="call-row"><span>Cross pattern off 10 — X</span><span class="badge badge-white">WHITE</span></div>
+        <div class="call-row"><span>Kick (any type)</span><span class="badge badge-black">BLACK</span></div>
+        <div class="call-row"><span>Double-up / option player</span><span class="badge badge-gold">GOLD</span></div>
+        <div class="call-row"><span>Offload (feet or ground)</span><span class="badge badge-white">POP</span></div>
+        <div class="call-row"><span>I want the ball</span><span class="badge badge-red">FIRE</span></div>
+        <div class="call-row"><span>Hold / carry — do not pass</span><span class="badge badge-black">HOLD</span></div>
+        <div class="call-row"><span>1st arrival at breakdown</span><span class="badge badge-red">SPIKE</span></div>
+        <div class="call-row"><span>2nd arrival at breakdown</span><span class="badge badge-green">LOCK</span></div>
+        <div class="call-row"><span>Quick lineout option — front</span><span class="badge badge-white">SHOT</span></div>
+        <div class="call-row"><span>Checkout call — middle</span><span class="badge badge-red">RED MID</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">🌦️ Defence — Weather</div>
+      <div class="call-grid">
+        <div class="call-row"><span>Blitz — numbers advantage</span><span class="badge badge-storm">STORM</span></div>
+        <div class="call-row"><span>Default — 3 steps hard</span><span class="badge badge-tide">TIDE</span></div>
+        <div class="call-row"><span>Shortage — back off &amp; slide</span><span class="badge badge-mist">MIST</span></div>
+        <div class="call-row"><span>Turnover — go in 20 seconds</span><span class="badge badge-wind">WIND</span></div>
+        <div class="call-row"><span>Go forward now</span><span class="badge badge-storm">UP</span></div>
+        <div class="call-row"><span>Hunt / Jackal on</span><span class="badge badge-wind">HUNT</span></div>
+      </div>
+      <div class="card-title" style="margin-top:14px;">🦊 Lineout — Animals</div>
+      <div class="call-grid">
+        <div class="call-row"><span>Front zone (Zone 1)</span><span class="badge badge-animal">FOX</span></div>
+        <div class="call-row"><span>Middle zone (Zone 3)</span><span class="badge badge-animal">HAWK</span></div>
+        <div class="call-row"><span>Back zone (Zone 5)</span><span class="badge badge-animal">BEAR</span></div>
+        <div class="call-row"><span>Straight up</span><span class="badge badge-animal">RISE</span></div>
+        <div class="call-row"><span>Move forward</span><span class="badge badge-animal">DART</span></div>
+        <div class="call-row"><span>Move back</span><span class="badge badge-animal">STEP</span></div>
+        <div class="call-row"><span>Pass to 9</span><span class="badge badge-animal">PASS</span></div>
+        <div class="call-row"><span>Drive / Katame</span><span class="badge badge-animal">DRIVE</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">🍺 Scrum — Drinks</div>
+      <div class="call-grid">
+        <div class="call-row"><span>9 pass out — channel 2</span><span class="badge badge-drink">LAGER</span></div>
+        <div class="call-row"><span>8 pick and go — channel 1</span><span class="badge badge-drink">STOUT</span></div>
+        <div class="call-row"><span>Drive scrum, ball exits</span><span class="badge badge-drink">AMBER</span></div>
+        <div class="call-row"><span>Wheel scrum</span><span class="badge badge-drink">PORTER</span></div>
+        <div class="call-row"><span>9 side attack</span><span class="badge badge-drink">PALE</span></div>
+        <div class="call-row"><span>8 and 9 side attack</span><span class="badge badge-drink">DRAFT</span></div>
+        <div class="call-row"><span>8 and 9 — shot (channel 1)</span><span class="badge badge-drink">STOUT DRY</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">⛰️ Maul — Terrain</div>
+      <div class="call-grid">
+        <div class="call-row"><span>Jumper / Target</span><span class="badge badge-terrain">SUMMIT</span></div>
+        <div class="call-row"><span>Lifters — turn and drive forward</span><span class="badge badge-terrain">RIDGE</span></div>
+        <div class="call-row"><span>Ball carrier — Anchor</span><span class="badge badge-terrain">RIVER</span></div>
+        <div class="call-row"><span>4th man — protect lifter</span><span class="badge badge-terrain">PEAK</span></div>
+        <div class="call-row"><span>Clearers / Drive through</span><span class="badge badge-terrain">BOULDER</span></div>
+        <div class="call-row"><span>Support / Fill space</span><span class="badge badge-terrain">PLAINS</span></div>
+      </div>
+      <div style="margin-top:12px;padding:10px 12px;background:rgba(74,222,128,0.04);border:1px solid var(--border);border-radius:5px;font-size:.76rem;color:var(--muted);">
+        <strong style="color:var(--white);">Katame</strong> — used to score tries, win penalties, gain ground, drag in defenders, and punish opposition for competing in the air. Platform first — then drive.
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+</div>
+<script>
+function show(id,el){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-item,.nav-single').forEach(n=>n.classList.remove('active'));
+  var s=document.getElementById('tab-'+id);
+  if(s)s.classList.add('active');
+  if(el)el.classList.add('active');
+  if(window.innerWidth<=800)toggleSidebar();
+}
+function toggleGroup(h){h.parentElement.classList.toggle('open');}
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('open');
+}
+document.querySelectorAll('.nav-group').forEach(g=>g.classList.add('open'));
+</script>
+</body>
+</html>
